@@ -1,0 +1,27 @@
+For extended regex you need to use - '-E ' option in grep - which stands for Extended POSIX Standards.
+
+? means either zero or one occurrence.
+
+
+Example: Accept http or https URL i.e either without s or with s.
+
+$cat regex23.txt 
+https://website
+http://website
+httpss://website
+httpx://website
+httpxx://website
+
+
+$grep -E '^https?://website$' regex23.txt 
+https://website
+http://website
+
+
+Which of the following regular expressions can represent the words 'colour' as well as 'color'?
+colou?r 
+
+u? means either zero u's or a single u. 
+
+
+

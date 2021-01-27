@@ -1,0 +1,32 @@
+For extended regex you need to use - '-E ' option in grep - which stands for Extended POSIX Standards.
+
+| means either OR operator.
+
+(a|b) represents either a or b, where a and b can be 
+multicharacter strings.
+
+
+Example: Any word start with log or ply are acceptable.
+
+$cat regex24.txt 
+sapwood
+rosewood
+logwood
+teakwood
+plywood
+redwood
+
+
+$ grep -E  '^(log|ply)wood$'  regex24.txt 
+logwood
+plywood
+
+
+Which of the following regular expressions can represent the words 'ascending' as well as 'descending'?
+
+(asc|desc)ending 
+
+Pipe symbol is used to provide choices.
+
+
+

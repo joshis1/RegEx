@@ -1,0 +1,31 @@
+Find the special meaning literal/symbol using escape character - backslash?
+
+Example - 
+Find all these patterns.
+
+1) xxx.yy 
+2) xx.yyyy 
+3) x.yy 
+
+
+Note - here '.' has a special meaning but we want to use this in string rather than treat as a special symbol. 
+
+Example: 
+
+$cat regex11.txt 
+xxx.yy
+xx.yyyy
+x.yy
+xy
+xxyy
+yyxx
+yx
+yxxx
+
+
+
+$grep 'x*\.y*' regex11.txt 
+xxx.yy
+xx.yyyy
+x.yy
+

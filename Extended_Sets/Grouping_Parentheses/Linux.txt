@@ -1,0 +1,49 @@
+For extended regex you need to use - '-E ' option in grep - which stands for Extended POSIX Standards.
+
+() - parenthesis is used to group and treat as a single entity.
+
+
+Example: For example, minimum 4 ha is required in the line.
+
+
+(ha){4,}
+
+$cat regex20.txt 
+ha
+hahahahaha
+hahaha
+hahahaha
+haha
+
+hahahahahaha
+hahahahahahahaha
+hahahahahahahahaha
+
+
+$grep -E '^(ha){4,}$' regex20.txt 
+hahahahaha
+hahahaha
+hahahahahaha
+hahahahahahahaha
+hahahahahahahahaha
+
+
+Example: For example, just 1 ha and 2ha are allowed.
+
+$cat regex21.txt 
+ha
+haha
+hahahahaha
+hahahaha
+hahaha
+hahahahahahaha
+hahahahahaha
+
+
+$grep -E '^(ha){1,2}$' regex21.txt
+ha
+haha
+
+
+
+

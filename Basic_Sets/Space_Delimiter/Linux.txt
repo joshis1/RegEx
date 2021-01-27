@@ -1,0 +1,27 @@
+Find zero or more spaces?
+
+Example: 
+
+$cat regex04.txt 
+fooxxxbar
+foo   bar
+fooxbar
+fooxxbar
+foo bar
+foo      bar
+foobar
+fooyyybar
+
+
+
+$grep 'foo\s*bar' regex04.txt 
+
+grep 'foo\s*bar' regex04.txt 
+foo   bar
+foo bar
+foo      bar
+foobar
+
+
+
+Note - \s* - zero or more whitespaces

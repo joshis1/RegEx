@@ -1,0 +1,25 @@
+Find zero or more any character?
+
+Example: 
+
+$cat regex03.txt 
+foobar
+barfoo
+fooabcbar
+foobxcbar
+barcbyfoo
+foozbar
+barafoo
+barabfoo
+
+
+
+$grep 'foo.*bar' regex03.txt 
+foobar
+fooabcbar
+foobxcbar
+foozbar
+
+
+What does the pattern a* stand for?
+zero or more occurences of a.

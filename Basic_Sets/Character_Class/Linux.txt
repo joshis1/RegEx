@@ -1,0 +1,25 @@
+Find one of the character inside the square bracket?
+
+
+Example - 
+[fcl] -- character class - one of the character inside 
+the square bracket i.e. f,c or l.
+
+Example: 
+
+$cat regex05.txt 
+foo
+moo
+coo
+doo
+poo
+loo
+boo
+hoo
+
+
+$grep '[fcl]oo' regex05.txt
+foo
+coo
+loo
+

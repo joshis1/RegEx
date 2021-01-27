@@ -1,0 +1,50 @@
+Special characters inside square brackets doesn't need backslash except - and ^ symbol?
+
+- symbol inside square bracket is used to represent range.
+^ symbol inside square bracket is used to represent not operator.
+
+
+Example: 
+
+$cat regex12.txt 
+x#y
+x:y
+x.y
+x&y
+x%y
+
+
+$grep 'x[#:.]y' regex12.txt 
+x#y
+x:y
+x.y
+
+
+$cat regex13.txt 
+x#y
+x:y
+x^y  ------> Look we want to include this too. We need escape character inside bracket to mute its special meaning.
+x&y
+x%y
+
+
+$grep 'x[#:\^]y' regex13.txt 
+x#y
+x:y
+x^y
+
+
+$cat regex14.txt 
+x#y
+x\y  -> escape character to include this.
+x^y  -> escape character to include this.
+x&y
+x%y
+
+$grep 'x[#\\\^]y' regex14.txt 
+x#y
+x\y
+x^y
+
+
+

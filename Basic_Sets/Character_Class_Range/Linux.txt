@@ -1,0 +1,32 @@
+Match the range of character in character class?
+
+
+Example - 
+[j-m] - Match all the letters j,k,l and m.
+
+Example: 
+
+$cat regex08.txt 
+joo
+boo
+koo
+loo
+woo
+moo
+zoo
+coo
+
+
+
+$grep '[j-m]oo' regex08.txt
+joo
+koo
+loo
+moo
+
+Notes - Ascii value of range --> starting and ending 
+a - 97 A = 65 
+c - 99 
+
+
+

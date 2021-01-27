@@ -1,0 +1,18 @@
+Find just one character?
+
+Example: 
+
+$cat regex02.txt 
+fooabar
+fooxbar
+baryfoo
+foobar
+fooxybar
+foocbar
+
+
+$grep 'foo.bar' regex02.txt 
+fooabar
+fooxbar
+foocbar
+

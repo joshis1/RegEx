@@ -1,0 +1,29 @@
+Find one of the character inside the square bracket using not operator?
+
+
+Example - 
+
+[^mh] -- means everything except m or h character.
+
+Example: 
+
+$cat regex06.txt 
+foo
+moo
+coo
+doo
+poo
+loo
+boo
+hoo
+
+
+$grep '[^mh]oo' regex06.txt
+foo
+coo
+doo
+poo
+loo
+boo
+
+

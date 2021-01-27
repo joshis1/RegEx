@@ -1,0 +1,19 @@
+Find zero or more character?
+
+Example: 
+
+$cat regex01.txt 
+fooaaaabar
+fooabar
+foobar
+fooaabar
+fooxxxbar
+fooxbar
+
+
+$grep 'fooa*bar' regex01.txt 
+
+fooaaaabar
+fooabar
+foobar
+fooaabar

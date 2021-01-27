@@ -1,0 +1,34 @@
+Mix and Match the range of character in character class and a particular letter?
+
+
+Example - 
+[j-mz] - Match all the letters j,k,l and m. Also, if the letter is z.
+
+Example: 
+
+$cat regex09.txt 
+joo
+boo
+koo
+loo
+woo
+moo
+zoo
+coo
+
+
+$grep '[j-mz]oo' regex09.txt 
+joo
+koo
+loo
+moo
+zoo
+
+
+Which of the following regular expressions can be used to represent both the strings 'gray' and 'grey'?
+gr[ae]y, gr.y , gr[a-z]y, all of the above.
+
+Though the choice gr[ae]y is the most specific answer, technically the other choices can also represent both gray and grey.
+
+
+

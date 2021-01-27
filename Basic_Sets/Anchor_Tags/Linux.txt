@@ -1,0 +1,66 @@
+Anchor tags ^ and $?
+
+^ signifies beginning of a line when used outside of a bracket.
+$ signifies end of a line when used outside of a bracket.
+
+
+Example - Beginning symbol. 
+
+Get all the lines starting with foo.
+
+$cat regex15.txt 
+foo bar baz
+bar foo baz
+baz foo bar
+bar baz foo
+foo baz bar
+baz bar foo
+
+$grep '^foo.*' regex15.txt
+foo bar baz
+foo baz bar
+
+
+Example - Ending symbol
+
+Get all the lines ending with bar.
+
+$cat regex16.txt 
+foo bar baz
+bar foo baz
+baz foo bar
+bar baz foo
+foo baz bar
+baz bar foo
+
+$grep '.*bar$' regex16.txt
+baz foo bar
+foo baz bar
+
+
+Example - Beginning and Ending symbol.
+
+Get all the lines starting with foo and end with foo i.e. just 1 word i.e. foo 
+
+$cat regex17.txt 
+foo
+foo bar
+baz foo
+foo bar baz
+baz bar foo
+
+$grep '^foo$' regex17.txt 
+foo
+
+Which of the following regular expressions represent a two digit even number?
+
+^[0-9][02468]$ 
+
+Which of the following regular expressions represent all 3 digit numbers that are multiples of 5?
+
+^[0-9][0-9][05]$
+
+
+
+
+

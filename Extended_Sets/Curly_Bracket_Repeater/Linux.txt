@@ -1,0 +1,26 @@
+For extended regex you need to use - '-E ' option in grep - which stands for Extended POSIX Standards.
+
+{m} - exactly 'm' occurences of whatever precedes.
+
+
+Example: Find all three digit literals.
+
+$cat regex18.txt 
+834
+519
+4874
+5
+89
+45687
+25
+645
+
+$grep -E '^[0-9]{3}$' regex18.txt
+834
+519
+645
+
+
+
+
+

@@ -1,0 +1,33 @@
+For extended regex you need to use - '-E ' option in grep - which stands for Extended POSIX Standards.
+
+{m,n} - atleast m and at most n occurences of whatever
+precedes. Only one of m,n is mandatory. Others can 
+be left blank.
+
+
+Example: Find the letters which are minimum 4 letters and maximum 6 letters.
+
+$cat regex19.txt 
+lion  
+tiger
+leopard
+fox
+kangaroo
+bat
+mouse
+cuckoo
+deer
+
+
+$grep -E '^[a-z]{4,6}$' regex19.txt
+lion
+tiger
+mouse
+cuckoo
+deer
+
+
+
+
+
+
